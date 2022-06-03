@@ -1,0 +1,70 @@
+html {
+  --main-color: #f6f8fa;
+  --nav-color: #f4f3fa;
+  --nav-border: #d0d7de;
+  --main-font: #000000;
+  --shadow: #6e6e77;
+}
+html.dark {
+  --main-color: #15181b;
+  --nav-color: #22272e;
+  --nav-border: #444c56;
+  --main-font: #adbac7;
+  --shadow: #0b0b0b;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  font-family: Consolas, monaco, monospace;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+button {
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+#themeSwitch {
+  -webkit-appearance: none;
+  position: relative;
+  outline: 0;
+  border-radius: 8px;
+  width: 100px;
+  height: 40px;
+  background-color: #437bc0;
+  z-index: 1;
+  cursor: pointer;
+}
+#themeSwitch:checked {
+  background-color: #090a0c;
+}
+#themeSwitch::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  border-radius: 5px;
+  height: 30px;
+  background-color: #fff;
+  z-index: 2;
+  top: 5px;
+  left: 5px;
+  transition: 0.2s ease-out;
+}
+#themeSwitch:checked::after {
+  left: 55px;
+  transition: 0.2s ease-out;
+}

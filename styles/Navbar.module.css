@@ -1,0 +1,115 @@
+.navbarContainer {
+  width: calc(100%-1rem);
+  height: 60px;
+  margin: 1rem;
+  border: 2px solid var(--nav-border);
+  box-shadow: 0px 0px 30px -20px rgba(0, 0, 0, 0.75) inset;
+  -webkit-box-shadow: 0px 0px 30px -20px rgba(0, 0, 0, 0.75) inset;
+  -moz-box-shadow: 0px 0px 30px -20px rgba(0, 0, 0, 0.75) inset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  background-color: var(--nav-color);
+}
+.themeSection {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.navButtons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.themeSlider {
+  position: relative;
+  width: 65px;
+  height: 30px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.sliderDark,
+.sliderLight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 120%;
+  position: absolute;
+  top: -2px;
+  transition: 0.2s ease-in-out;
+}
+.sliderDark {
+  background-color: #090a0c;
+  left: -70px;
+}
+.sliderLight {
+  background-color: #437bc0;
+  left: 70px;
+}
+.sliderDark.active,
+.sliderLight.active {
+  left: 0px;
+}
+.navButton {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  gap: 4px;
+  font-size: 1.4rem;
+  padding: 0.4rem;
+  border-radius: 5px;
+  z-index: 2;
+  transform: translateY(-1px);
+}
+.orangeButton {
+  background-color: #f97e27;
+  box-shadow: 0px 4px 0px #814215;
+  transition: 0.1s ease;
+}
+.orangeButton:hover {
+  background-color: #ff974d;
+  transform: translateY(2px);
+  box-shadow: 0px 2px 0px #814215;
+}
+.redButton {
+  background-color: #f82424;
+  box-shadow: 0px 4px 0px #901616;
+  transition: 0.1s ease;
+}
+.redButton:hover {
+  background-color: #ef4d4d;
+  transform: translateY(2px);
+  box-shadow: 0px 2px 0px #901616;
+}
+.goldButton {
+  background-color: #f0ce0f;
+  box-shadow: 0px 4px 0px #c2a710;
+  transition: 0.1s ease;
+}
+.goldButton:hover {
+  background-color: #ead147;
+  transform: translateY(2px);
+  box-shadow: 0px 2px 0px #c2a710;
+}
+.greenButton {
+  background-color: #347d39;
+  box-shadow: 0px 4px 0px #255128;
+  transition: 0.1s ease;
+}
+.greenButton:hover {
+  background-color: #5da462;
+  transform: translateY(2px);
+  box-shadow: 0px 2px 0px #255128;
+}
+.blueButton {
+  background-color: #204b94;
+  box-shadow: 0px 4px 0px #122f61;
+  transition: 0.1s ease;
+}
+.blueButton:hover {
+  background-color: #2759ae;
+  transform: translateY(2px);
+  box-shadow: 0px 2px 0px #122f61;
+}

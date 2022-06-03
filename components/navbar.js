@@ -13,7 +13,8 @@ function Navbar() {
   const { theme, setTheme } = useTheme();
 
   const switchTheme = useCallback((node) => {
-    if (node !== null && !localTheme) {
+    if (node !== null && localTheme) {
+      console.log("masuk");
       if (node.checked) {
         setTheme("dark");
         localStorage.setItem("theme", "dark");
@@ -22,6 +23,7 @@ function Navbar() {
         localStorage.setItem("theme", "light");
       }
     } else {
+      console.log("masuk 2");
       theme === "dark" ? (node.checked = true) : (node.checked = false);
     }
   }, []);
@@ -29,10 +31,13 @@ function Navbar() {
   const localTheme = () => {
     let currentTheme = localStorage.getItem("theme");
     if (currentTheme) {
+      console.log("true", currentTheme);
       setTheme(currentTheme);
       return true;
+    } else {
+      console.log("false");
+      return false;
     }
-    return false;
   };
 
   useEffect(() => {

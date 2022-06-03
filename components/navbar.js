@@ -86,6 +86,13 @@ function Navbar() {
           </button>
         </a>
 
+        <a href="#sectionPort">
+          <button className={`${styles.navButton} . ${styles.cyanButton}`}>
+            <GiRoundStar />
+            <span>Portfolio</span>
+          </button>
+        </a>
+
         <a href="#sectionExp">
           <button className={`${styles.navButton} . ${styles.cyanButton}`}>
             <GiRoundStar />

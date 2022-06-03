@@ -43,8 +43,8 @@ button {
   position: relative;
   outline: 0;
   border-radius: 8px;
-  width: 100px;
-  height: 40px;
+  width: 80px;
+  height: 30px;
   background-color: #437bc0;
   z-index: 1;
   cursor: pointer;
@@ -55,9 +55,9 @@ button {
 #themeSwitch::after {
   content: "";
   position: absolute;
-  width: 40px;
+  width: 30px;
   border-radius: 5px;
-  height: 30px;
+  height: 20px;
   background-color: #fff;
   z-index: 2;
   top: 5px;
@@ -65,6 +65,6 @@ button {
   transition: 0.2s ease-out;
 }
 #themeSwitch:checked::after {
-  left: 55px;
+  left: 45px;
   transition: 0.2s ease-out;
 }

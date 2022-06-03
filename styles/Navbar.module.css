@@ -1,6 +1,6 @@
 .navbarContainer {
   width: calc(100%-1rem);
-  height: 60px;
+  height: 50px;
   margin: 1rem;
   border: 2px solid var(--nav-border);
   box-shadow: 0px 0px 30px -20px rgba(0, 0, 0, 0.75) inset;
@@ -57,7 +57,7 @@
   align-items: center;
   color: #fff;
   gap: 4px;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   padding: 0.4rem;
   border-radius: 5px;
   z-index: 2;

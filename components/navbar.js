@@ -87,7 +87,7 @@ function Navbar() {
         </a>
 
         <a href="#sectionExp">
-          <button className={`${styles.navButton} . ${styles.goldButton}`}>
+          <button className={`${styles.navButton} . ${styles.cyanButton}`}>
             <GiRoundStar />
             <span>Experience</span>
           </button>

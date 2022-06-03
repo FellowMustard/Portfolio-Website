@@ -83,15 +83,15 @@
   transform: translateY(2px);
   box-shadow: 0px 2px 0px #901616;
 }
-.goldButton {
-  background-color: #f0ce0f;
-  box-shadow: 0px 4px 0px #c2a710;
+.cyanButton {
+  background-color: #1ca4aa;
+  box-shadow: 0px 4px 0px #1c383b;
   transition: 0.1s ease;
 }
-.goldButton:hover {
-  background-color: #ead147;
+.cyanButton:hover {
+  background-color: #2bbdc5;
   transform: translateY(2px);
-  box-shadow: 0px 2px 0px #c2a710;
+  box-shadow: 0px 2px 0px #1c4d47;
 }
 .greenButton {
   background-color: #347d39;

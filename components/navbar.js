@@ -5,6 +5,7 @@ import { AiFillHome, AiFillMail } from "react-icons/ai";
 import { MdSettingsSuggest } from "react-icons/md";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 import { GiRoundStar } from "react-icons/gi";
+import { RiCodeBoxFill } from "react-icons/ri";
 import { useTheme } from "next-themes";
 
 function Navbar() {
@@ -12,17 +13,31 @@ function Navbar() {
   const { theme, setTheme } = useTheme();
 
   const switchTheme = useCallback((node) => {
-    if (node !== null) {
+    if (node !== null && !localTheme) {
       if (node.checked) {
         setTheme("dark");
+        localStorage.setItem("theme", "dark");
       } else {
         setTheme("light");
+        localStorage.setItem("theme", "light");
       }
+    } else {
+      theme === "dark" ? (node.checked = true) : (node.checked = false);
     }
   }, []);
 
+  const localTheme = () => {
+    let currentTheme = localStorage.getItem("theme");
+    if (currentTheme) {
+      setTheme(currentTheme);
+      return true;
+    }
+    return false;
+  };
+
   useEffect(() => {
     setMounted(true);
+    localTheme();
   }, []);
 
   if (!mounted) return null;
@@ -30,6 +45,7 @@ function Navbar() {
   const themeChecked = (e) => {
     let currentTheme = e.target.checked ? "dark" : "light";
     setTheme(currentTheme);
+    localStorage.setItem("theme", currentTheme);
   };
   return (
     <motion.nav
@@ -87,8 +103,8 @@ function Navbar() {
         </a>
 
         <a href="#sectionPort">
-          <button className={`${styles.navButton} . ${styles.cyanButton}`}>
-            <GiRoundStar />
+          <button className={`${styles.navButton} . ${styles.purpleButton}`}>
+            <RiCodeBoxFill />
             <span>Portfolio</span>
           </button>
         </a>

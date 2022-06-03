@@ -113,3 +113,13 @@
   transform: translateY(2px);
   box-shadow: 0px 2px 0px #122f61;
 }
+.purpleButton {
+  background-color: #9992b3;
+  box-shadow: 0px 4px 0px #303054;
+  transition: 0.1s ease;
+}
+.purpleButton:hover {
+  background-color: #c1b8e3;
+  transform: translateY(2px);
+  box-shadow: 0px 2px 0px #303054;
+}

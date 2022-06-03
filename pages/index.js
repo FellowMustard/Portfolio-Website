@@ -18,6 +18,9 @@ export default function Home() {
         <div className={styles.pageComponent} id="sectionSkill">
           skill
         </div>
+        <div className={styles.pageComponent} id="sectionPort">
+          Portfolio
+        </div>
         <div className={styles.pageComponent} id="sectionExperience">
           experience
         </div>

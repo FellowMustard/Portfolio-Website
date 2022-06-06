@@ -22,16 +22,14 @@
 .earthContent {
   position: absolute;
   top: -70%;
-  width: 1600px;
+  width: 800px;
   height: 800px;
-  background: url("../public/earth.png") center;
-  object-fit: contain;
-  transform: translateX(200px) scale(0.5);
+  transform: scale(0.9);
 }
 .pinMap {
   position: absolute;
-  top: 58%;
-  left: 42%;
+  top: 42%;
+  left: 45%;
 }
 .pinSvg {
   color: #ff8819;

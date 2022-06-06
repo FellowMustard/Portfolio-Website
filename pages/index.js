@@ -1,3 +1,4 @@
+import About from "../components/about";
 import Homepage from "../components/homepage";
 import Navbar from "../components/navbar";
 import styles from "../styles/Index.module.css";
@@ -13,7 +14,7 @@ export default function Home() {
           <Homepage />
         </div>
         <div className={styles.pageComponent} id="sectionAbout">
-          about
+          <About />
         </div>
         <div className={styles.pageComponent} id="sectionSkill">
           skill
@@ -21,7 +22,7 @@ export default function Home() {
         <div className={styles.pageComponent} id="sectionPort">
           Portfolio
         </div>
-        <div className={styles.pageComponent} id="sectionExperience">
+        <div className={styles.pageComponent} id="sectionExp">
           experience
         </div>
         <div className={styles.pageComponent} id="sectionContact">

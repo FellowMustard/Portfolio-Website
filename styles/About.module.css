@@ -1,0 +1,39 @@
+.aboutSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0 2rem;
+}
+.earth {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background-color: rgb(17, 50, 106);
+  box-shadow: 0px 0px 22px 0px rgba(17, 50, 106, 0.75);
+  -webkit-box-shadow: 0px 0px 22px 0px rgba(17, 50, 106, 0.75);
+  -moz-box-shadow: 0px 0px 22px 0px rgba(17, 50, 106, 0.75);
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.earthContent {
+  position: absolute;
+  top: -70%;
+  width: 1600px;
+  height: 800px;
+  background: url("../public/earth.png") center;
+  object-fit: contain;
+  transform: translateX(200px) scale(0.5);
+}
+.pinMap {
+  position: absolute;
+  top: 58%;
+  left: 42%;
+}
+.pinSvg {
+  color: #ff8819;
+  font-size: 20px;
+}

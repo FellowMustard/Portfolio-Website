@@ -13,7 +13,7 @@ function Navbar() {
   const { theme, setTheme } = useTheme();
 
   const switchTheme = useCallback((node) => {
-    if (node !== null && localTheme) {
+    if (node !== null && !localTheme) {
       if (node.checked) {
         setTheme("dark");
         localStorage.setItem("theme", "dark");
@@ -28,6 +28,7 @@ function Navbar() {
 
   const localTheme = () => {
     let currentTheme = localStorage.getItem("theme");
+    console.log(currentTheme);
     if (currentTheme) {
       setTheme(currentTheme);
       return true;

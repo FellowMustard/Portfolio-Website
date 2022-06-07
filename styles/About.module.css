@@ -4,6 +4,7 @@
   justify-content: justify-between;
   height: 100vh;
   padding: 0 2rem;
+  overflow: hidden;
 }
 .earth {
   width: 400px;

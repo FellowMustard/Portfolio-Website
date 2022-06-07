@@ -10,13 +10,15 @@ function About() {
     <main className={styles.aboutSection}>
       <motion.section
         initial={{ y: 460, x: 450, scale: 2 }}
-        animate={{ y: 0, x: 100, scale: 1 }}
+        whileInView={{ y: 0, x: 100, scale: 1 }}
+        viewport={{ once: true }}
         transition={{ delay: 1 }}
         className={styles.earth}
       >
         <motion.div
           initial={{ x: 200 }}
-          animate={{ x: -200 }}
+          whileInView={{ x: -200 }}
+          viewport={{ once: true }}
           transition={{ duration: 3.5, delay: 0.5 }}
           className={styles.earthContent}
         >
@@ -24,8 +26,9 @@ function About() {
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 3.8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 3.5 }}
           className={styles.pinMap}
         >
           <IoIosPin className={styles.pinSvg}></IoIosPin>

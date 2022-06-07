@@ -13,17 +13,19 @@ function Navbar() {
   const { theme, setTheme } = useTheme();
 
   const switchTheme = useCallback((node) => {
-    if (node !== null && !localTheme) {
-      const mq = window.matchMedia("(prefers-color-scheme: dark)");
-      if (mq.matches) {
-        setTheme("dark");
-        node.checked = true;
+    if (node !== null) {
+      if (localTheme()) {
+        theme === "dark" ? (node.checked = true) : (node.checked = false);
       } else {
-        setTheme("light");
-        node.checked = false;
+        const mq = window.matchMedia("(prefers-color-scheme: dark)");
+        if (mq.matches) {
+          setTheme("dark");
+          node.checked = true;
+        } else {
+          setTheme("light");
+          node.checked = false;
+        }
       }
-    } else {
-      theme === "dark" ? (node.checked = true) : (node.checked = false);
     }
   }, []);
 

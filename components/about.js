@@ -9,13 +9,13 @@ function About() {
   return (
     <main className={styles.aboutSection}>
       <motion.section
-        initial={{ y: 460, x: 0, scale: 2 }}
-        animate={{ y: 0, x: -390, scale: 1 }}
+        initial={{ y: 460, x: 450, scale: 2 }}
+        animate={{ y: 0, x: 100, scale: 1 }}
         transition={{ delay: 1 }}
         className={styles.earth}
       >
         <motion.div
-          initial={{ x: 0 }}
+          initial={{ x: 200 }}
           animate={{ x: -200 }}
           transition={{ duration: 3.5, delay: 0.5 }}
           className={styles.earthContent}

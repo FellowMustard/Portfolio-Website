@@ -14,12 +14,13 @@ function Navbar() {
 
   const switchTheme = useCallback((node) => {
     if (node !== null && !localTheme) {
-      if (node.checked) {
+      const mq = window.matchMedia("(prefers-color-scheme: dark)");
+      if (mq.matches) {
         setTheme("dark");
-        localStorage.setItem("theme", "dark");
+        node.checked = true;
       } else {
         setTheme("light");
-        localStorage.setItem("theme", "light");
+        node.checked = false;
       }
     } else {
       theme === "dark" ? (node.checked = true) : (node.checked = false);
@@ -28,7 +29,6 @@ function Navbar() {
 
   const localTheme = () => {
     let currentTheme = localStorage.getItem("theme");
-    console.log(currentTheme);
     if (currentTheme) {
       setTheme(currentTheme);
       return true;
@@ -68,14 +68,14 @@ function Navbar() {
         <div className={styles.themeSlider}>
           <p
             className={`${styles.sliderDark} . ${
-              theme === "light" ? "" : styles.active
+              theme === "dark" ? styles.active : ""
             }`}
           >
             Dark
           </p>
           <p
             className={`${styles.sliderLight} . ${
-              theme === "light" ? styles.active : ""
+              theme === "dark" ? "" : styles.active
             }`}
           >
             Light

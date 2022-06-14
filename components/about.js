@@ -70,7 +70,7 @@ function About() {
           <motion.div variants={hoverSpan} whileHover="hover">
             t
           </motion.div>
-          <div>&nbsp;</div>
+          <div className={styles.blankSpace}></div>
           <motion.div variants={hoverSpan} whileHover="hover">
             M
           </motion.div>

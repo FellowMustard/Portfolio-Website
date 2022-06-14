@@ -88,7 +88,7 @@ function About() {
           I love to learn something new to improve myself to become a better
           programmer and better person.
         </p>
-        <p>I am currently learning more about</p>
+        <p>I am currently learning more about ...</p>
       </motion.div>
     </main>
   );

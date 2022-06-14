@@ -1,9 +1,15 @@
 html {
-  --main-color: #e0e0e0;
-  --nav-color: #cacaca;
-  --nav-border: #a7a4a4;
-  --main-font: #000000;
+  --main-color: #ece5c7;
+  --nav-color: #eae0b2;
+  --nav-border: #a9875d;
+  --main-font: #4c3734;
   --shadow: #6e6e77;
+  --typefont-blue: #1c5269;
+  --typefont-yellow: #625524;
+  --typefont-orange: #a86110;
+  --typefont-red: #870915;
+  --light-hidden: none;
+  --dark-hidden: block;
 }
 html.dark {
   --main-color: #15181b;
@@ -11,6 +17,12 @@ html.dark {
   --nav-border: #444c56;
   --main-font: #adbac7;
   --shadow: #0b0b0b;
+  --typefont-blue: #1175a0;
+  --typefont-yellow: #dab62a;
+  --typefont-orange: #db7f15;
+  --typefont-red: #bd2837;
+  --light-hidden: block;
+  --dark-hidden: none;
 }
 
 body {
@@ -29,6 +41,7 @@ a {
 }
 p {
   margin: 0;
+  color: var(--main-font);
 }
 button {
   padding: 0;
@@ -45,7 +58,7 @@ button {
   border-radius: 8px;
   width: 80px;
   height: 30px;
-  background-color: #437bc0;
+  background-color: #a9875d;
   z-index: 1;
   cursor: pointer;
 }
@@ -58,13 +71,14 @@ button {
   width: 30px;
   border-radius: 5px;
   height: 20px;
-  background-color: #fff;
+  background-color: #4c3734;
   z-index: 2;
   top: 5px;
   left: 5px;
-  transition: 0.2s ease-out;
+  transition: left 0.2s ease-out;
 }
 #themeSwitch:checked::after {
   left: 45px;
+  background-color: #ffffff;
   transition: 0.2s ease-out;
 }

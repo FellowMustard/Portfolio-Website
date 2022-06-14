@@ -133,30 +133,30 @@
 }
 @keyframes colorChange {
   0% {
-    color: #1175a0;
+    color: var(--typefont-blue);
   }
   24.99% {
-    color: #1175a0;
+    color: var(--typefont-blue);
   }
   25% {
-    color: #dab62a;
+    color: var(--typefont-yellow);
   }
   49.99% {
-    color: #dab62a;
+    color: var(--typefont-yellow);
   }
   50% {
-    color: #db7f15;
+    color: var(--typefont-orange);
   }
   74.99% {
-    color: #db7f15;
+    color: var(--typefont-orange);
   }
   75% {
-    color: #bd2837;
+    color: var(--typefont-red);
   }
   99.99% {
-    color: #bd2837;
+    color: var(--typefont-red);
   }
   100% {
-    color: #1175a0;
+    color: var(--typefont-blue);
   }
 }

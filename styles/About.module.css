@@ -1,7 +1,7 @@
 .aboutSection {
   display: flex;
   align-items: center;
-  justify-content: justify-between;
+  justify-content: space-around;
   height: 100vh;
   padding: 0 2rem;
   overflow: hidden;
@@ -35,4 +35,15 @@
 .pinSvg {
   color: #ff8819;
   font-size: 20px;
+}
+.aboutParagraph {
+  max-width: 500px;
+  font-size: 30px;
+  color: var(--main-font);
+}
+.aboutText {
+  cursor: pointer;
+  display: flex;
+  font-size: 45px;
+  font-weight: 800;
 }

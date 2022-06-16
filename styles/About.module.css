@@ -41,12 +41,30 @@
   font-size: 30px;
   color: var(--main-font);
 }
-.aboutText {
+.springText {
   cursor: pointer;
-  display: flex;
+  display: inline-flex;
   font-size: 45px;
   font-weight: 800;
+  gap: -5px;
 }
 .blankSpace {
   margin: 0 10px;
+}
+.aboutTextContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.flagGradient {
+  background: rgb(247, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(247, 0, 0, 1) 0%,
+    rgba(247, 0, 0, 1) 50%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
 }

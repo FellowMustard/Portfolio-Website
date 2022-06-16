@@ -6,12 +6,36 @@ import Image from "next/image";
 import earthImg from "../public/static/earth.png";
 
 function About() {
-  const hoverSpan = {
+  const hoverSpanAbout = {
     hover: {
-      scale: 2,
-      transition: { duration: 0.3 },
+      scale: 1.7,
+      transition: { duration: 0.3, type: "spring", stiffness: 450 },
       color: ["#7299cc", "#34b5d9"],
-      rotate: 45,
+      rotate: -25,
+    },
+  };
+  const hoverSpanIndo = {
+    hover: {
+      scale: 1.7,
+      transition: { duration: 0.3, type: "spring", stiffness: 450 },
+      color: ["#f70000", "#961515"],
+      rotate: 25,
+    },
+  };
+  const hoverSpanMiddle = {
+    hover: {
+      scale: 1.7,
+      transition: { duration: 0.3, type: "spring", stiffness: 450 },
+      rotate: 25,
+      color: ["transparent", "transparent"],
+    },
+  };
+  const hoverSpanEsia = {
+    hover: {
+      scale: 1.7,
+      transition: { duration: 0.3, type: "spring", stiffness: 450 },
+      color: ["#f7f7f7", "#ebebeb"],
+      rotate: 25,
     },
   };
   return (
@@ -44,7 +68,7 @@ function About() {
       </motion.section>
 
       <motion.div
-        initial={{ x: 670, opacity: 0 }}
+        initial={{ x: 570, opacity: 0 }}
         whileInView={{ x: 0, opacity: 1 }}
         transition={{
           duration: 0.5,
@@ -54,41 +78,78 @@ function About() {
         }}
         className={styles.aboutParagraph}
       >
-        <div className={styles.aboutText}>
-          <motion.div variants={hoverSpan} whileHover="hover">
+        <div className={styles.springText}>
+          <motion.div variants={hoverSpanAbout} whileHover="hover">
             A
           </motion.div>
-          <motion.div variants={hoverSpan} whileHover="hover">
+          <motion.div variants={hoverSpanAbout} whileHover="hover">
             b
           </motion.div>
-          <motion.div variants={hoverSpan} whileHover="hover">
+          <motion.div variants={hoverSpanAbout} whileHover="hover">
             o
           </motion.div>
-          <motion.div variants={hoverSpan} whileHover="hover">
+          <motion.div variants={hoverSpanAbout} whileHover="hover">
             u
           </motion.div>
-          <motion.div variants={hoverSpan} whileHover="hover">
+          <motion.div variants={hoverSpanAbout} whileHover="hover">
             t
           </motion.div>
           <div className={styles.blankSpace}></div>
-          <motion.div variants={hoverSpan} whileHover="hover">
+          <motion.div variants={hoverSpanAbout} whileHover="hover">
             M
           </motion.div>
-          <motion.div variants={hoverSpan} whileHover="hover">
+          <motion.div variants={hoverSpanAbout} whileHover="hover">
             e
           </motion.div>
-          <motion.div variants={hoverSpan} whileHover="hover">
+          <motion.div variants={hoverSpanAbout} whileHover="hover">
             ,
           </motion.div>
         </div>
-        <p>
-          I was born and raised in a city called Batam located in Indonesia.
-        </p>
-        <p>
-          I love to learn something new to improve myself to become a better
-          programmer and better person.
-        </p>
-        <p>I am currently learning more about ...</p>
+
+        <div className={styles.aboutTextContent}>
+          <div>
+            I was born and raised in a city called Batam located in
+            <span className={styles.springText}>
+              <motion.div variants={hoverSpanIndo} whileHover="hover">
+                I
+              </motion.div>
+              <motion.div variants={hoverSpanIndo} whileHover="hover">
+                n
+              </motion.div>
+              <motion.div variants={hoverSpanIndo} whileHover="hover">
+                d
+              </motion.div>
+              <motion.div variants={hoverSpanIndo} whileHover="hover">
+                o
+              </motion.div>
+              <motion.div
+                className={styles.flagGradient}
+                variants={hoverSpanMiddle}
+                whileHover="hover"
+              >
+                n
+              </motion.div>
+              <motion.div variants={hoverSpanEsia} whileHover="hover">
+                e
+              </motion.div>
+              <motion.div variants={hoverSpanEsia} whileHover="hover">
+                s
+              </motion.div>
+              <motion.div variants={hoverSpanEsia} whileHover="hover">
+                i
+              </motion.div>
+              <motion.div variants={hoverSpanEsia} whileHover="hover">
+                a
+              </motion.div>
+            </span>
+            .
+          </div>
+          <div>
+            I love to learn something new to improve myself to become a better
+            programmer and better person.
+          </div>
+          <div>I am currently learning more about ...</div>
+        </div>
       </motion.div>
     </main>
   );
